@@ -1,0 +1,16 @@
+{
+  "name": "Linux Desktop with RDP",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": [
+    "--cpus=4",
+    "--memory=16g"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "postCreateCommand": "sudo bash /workspaces/setup.sh",
+  "forwardPorts": [3389],
+  "remoteUser": "vscode"
+}
